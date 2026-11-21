@@ -69,8 +69,14 @@ Live URL: `https://comradeonboard.github.io/chioma-silas-portfolio/`
 - No photographs were supplied, so the hero uses a typographic "focus panel"
   instead of an image. A portrait can be added later without changing the
   layout.
-- Contact details (email, WhatsApp, social handles) are **not yet published**.
-  See `TODO-CONTENT.md` before sharing the site widely.
+- Contact details are published on `contact.html`: **chiomasilas92@gmail.com**
+  and **+234 907 009 9071** (WhatsApp and phone). Social handles are still
+  pending — see `TODO-CONTENT.md`.
 - All claims are limited to the information Chioma supplied: medical student,
   AI automation training, content and video, romance writing and ghostwriting,
   Oma AI and Tech, and Omas Empire.
+
+## Standalone project
+
+This site is its own repository and folder. It is **not** connected to, built
+from, or deployed alongside any other portfolio project in this workspace.

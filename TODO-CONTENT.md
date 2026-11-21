@@ -3,18 +3,18 @@
 The site is complete and deployable, but a few details are waiting on Chioma.
 Nothing below blocks publishing — it only makes the site stronger.
 
-## 1. Contact details (highest priority)
+## 1. Contact details
 
-`contact.html` currently says the direct lines are being set up. Replace the
-note with real details when they arrive:
+Published on `contact.html`:
 
-- [ ] Email address
-- [ ] WhatsApp number (for a `https://wa.me/...` button)
+- [x] Email: `chiomasilas92@gmail.com`
+- [x] Phone / WhatsApp: `+234 907 009 9071`
+
+Still pending:
+
 - [ ] LinkedIn URL
 - [ ] Instagram / TikTok / X handles for **Oma AI and Tech**
 - [ ] Social handle or order channel for **Omas Empire**
-
-Search for `TODO(contact)` in `contact.html` once the details are added.
 
 ## 2. Photography
 
