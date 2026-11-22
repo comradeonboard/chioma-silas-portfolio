@@ -4,3 +4,6 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# Original client media (optimised copies live in assets/)
+media content/

@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://comradeonboard.github.io/chioma-silas-portfolio/</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://comradeonboard.github.io/chioma-silas-portfolio/about.html</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comradeonboard.github.io/chioma-silas-portfolio/expertise.html</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comradeonboard.github.io/chioma-silas-portfolio/ventures.html</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://comradeonboard.github.io/chioma-silas-portfolio/studio.html</loc>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comradeonboard.github.io/chioma-silas-portfolio/writing.html</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://comradeonboard.github.io/chioma-silas-portfolio/contact.html</loc>
-    <lastmod>2026-11-21</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>

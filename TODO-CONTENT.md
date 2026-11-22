@@ -1,7 +1,7 @@
 # Outstanding content
 
 The site is complete and deployable, but a few details are waiting on Chioma.
-Nothing below blocks publishing — it only makes the site stronger.
+Nothing below blocks publishing. It only makes the site stronger.
 
 ## 1. Contact details
 
@@ -12,16 +12,18 @@ Published on `contact.html`:
 
 Still pending:
 
-- [ ] LinkedIn URL
-- [ ] Instagram / TikTok / X handles for **Oma AI and Tech**
+- [x] LinkedIn: `linkedin.com/in/chioma-silas-b82951314`
+- [x] TikTok: `@oma_automates`
+- [ ] Instagram / X handles, if she wants them added
 - [ ] Social handle or order channel for **Omas Empire**
 
-## 2. Photography
+## 2. Photography and video
 
-- [ ] A portrait of Chioma for the hero panel and `about.html`
-- [ ] Any behind-the-scenes content, video stills or clothing shots
-- [ ] A dedicated social preview image is already in place
-      (`assets/img/og-cover.png`); replace it if a portrait is added
+- [x] Portrait supplied by Chioma, used in the hero and on `about.html`
+- [x] Three vertical studio clips compressed and published on `studio.html`
+- [ ] Behind-the-scenes content, more video stills or clothing shots
+- [ ] A dedicated social preview image is in place
+      (`assets/img/og-cover.png`); replace it if a better portrait arrives
 
 ## 3. Writing
 
@@ -39,6 +41,7 @@ Still pending:
 
 ## 5. Review before launch
 
-- [ ] Read every page once for tone — the copy is written in third person
+- [ ] Read every page once for tone. The copy is written in third person
 - [ ] Check the spelling of **Oma AI and Tech** and **Omas Empire**
 - [ ] Confirm the birth details (29 April, Zaria, Kaduna State) are meant to be public
+- [ ] Confirm her course is **nursing** everywhere on the site

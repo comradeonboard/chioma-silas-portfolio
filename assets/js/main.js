@@ -118,6 +118,70 @@
     counters.forEach(function (el) { countObserver.observe(el); });
   }
 
+  /* ---------- Studio reels ---------- */
+  var reels = Array.prototype.slice.call(document.querySelectorAll(".studio-video"));
+
+  if (reels.length) {
+    var loadReel = function (v) {
+      if (!v.src && v.dataset.src) v.src = v.dataset.src;
+    };
+
+    if (reduceMotion) {
+      reels.forEach(function (v) {
+        v.controls = true;
+        loadReel(v);
+      });
+    } else if ("IntersectionObserver" in window) {
+      var reelObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            loadReel(v);
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          } else if (!v.paused) {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.4 });
+
+      reels.forEach(function (v) { reelObserver.observe(v); });
+    } else {
+      reels.forEach(loadReel);
+    }
+
+    if (!reduceMotion) {
+      reels.forEach(function (v) {
+        var media = v.closest(".reel-media");
+        if (!media) return;
+
+        var toggle = function () {
+          if (v.paused) {
+            loadReel(v);
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          } else {
+            v.pause();
+          }
+        };
+
+        media.setAttribute("role", "button");
+        media.setAttribute("tabindex", "0");
+        media.setAttribute("aria-label", "Play or pause " + (v.getAttribute("aria-label") || "studio video"));
+        media.addEventListener("click", toggle);
+        media.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggle();
+          }
+        });
+
+        v.addEventListener("playing", function () { media.classList.add("is-playing"); });
+        v.addEventListener("pause", function () { media.classList.remove("is-playing"); });
+      });
+    }
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
