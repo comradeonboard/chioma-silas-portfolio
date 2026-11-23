@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://comradeonboard.github.io/chioma-silas-portfolio/sitemap.xml
+Sitemap: https://chiomasilas.onrender.com/sitemap.xml

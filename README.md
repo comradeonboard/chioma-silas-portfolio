@@ -46,7 +46,6 @@ sitemap.xml, robots.txt         search engine files
 server.py                       small Python server for Render Web Services
 requirements.txt                empty dependency list for Render's Python build
 render.yaml                     Render Blueprint for a Python Web Service
-.github/workflows/deploy.yml    auto-deploy to GitHub Pages on push to main
 ```
 
 ## Editing
@@ -64,13 +63,6 @@ The design uses:
   under `prefers-reduced-motion`.
 - Responsive layout from 320px up.
 - No external JavaScript libraries.
-
-## Deploying (GitHub Pages)
-
-Every push to `main` publishes via `.github/workflows/deploy.yml`. Set
-**Settings → Pages → Source: GitHub Actions** once, then push.
-
-Live URL: `https://comradeonboard.github.io/chioma-silas-portfolio/`
 
 ## Deploying (Render Web Service)
 
@@ -96,8 +88,9 @@ The repo includes everything needed for this:
 You can also use **New > Blueprint** in Render, connect this repository, and
 Render will read `render.yaml` automatically.
 
-Your site will be available at the `onrender.com` URL shown in the Render
-Dashboard.
+Live URL: `https://chiomasilas.onrender.com/`
+
+Pushes to `main` trigger a new deploy if auto deploy is enabled in Render.
 
 **Optional: Render Static Site instead**
 
