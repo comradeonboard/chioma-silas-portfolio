@@ -69,6 +69,32 @@ Every push to `main` publishes via `.github/workflows/deploy.yml`. Set
 
 Live URL: `https://comradeonboard.github.io/chioma-silas-portfolio/`
 
+## Deploying (Render)
+
+This is a static site with no build step.
+
+**Recommended: Render Static Site**
+
+1. Create a new **Static Site** on Render and connect this repository.
+2. Leave **Build Command** empty.
+3. Set **Publish Directory** to `.`.
+4. Leave **Start Command** empty.
+
+Render will serve the HTML, CSS, JavaScript, video and image files directly.
+
+**If Render requires a Web Service instead**
+
+- Runtime: **Python 3**
+- Build Command: `echo "No build step"`
+- Start Command:
+
+```bash
+python3 -m http.server $PORT --bind 0.0.0.0
+```
+
+The server must listen on `0.0.0.0` and use Render's `$PORT` variable. Do not
+hardcode a port and do not bind to `127.0.0.1`.
+
 ## Content notes
 
 - A portrait supplied by Chioma is used in the hero and on `about.html`, and in
