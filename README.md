@@ -72,45 +72,40 @@ Every push to `main` publishes via `.github/workflows/deploy.yml`. Set
 
 Live URL: `https://comradeonboard.github.io/chioma-silas-portfolio/`
 
-## Deploying (Render)
+## Deploying (Render Web Service)
 
-This is a static site with no build step.
+This repo is fully configured for a Render Web Service with Python.
 
-**Recommended: Render Static Site**
+1. Create a new **Web Service**, or open your existing one, and connect this
+   repository.
+2. Language / Runtime: **Python 3**
+3. Build Command: `pip install -r requirements.txt`
+4. Start Command: `python3 server.py`
+5. Health Check Path: `/` (under Advanced)
+6. Click **Manual Deploy > Deploy latest commit**, or simply push to `main` if
+   auto deploy is enabled.
 
-1. Create a new **Static Site** on Render and connect this repository.
-2. Leave **Build Command** empty.
-3. Set **Publish Directory** to `.`.
-4. Leave **Start Command** empty.
+The repo includes everything needed for this:
 
-Render will serve the HTML, CSS, JavaScript, video and image files directly.
+- `server.py`: serves the site on `0.0.0.0` and uses Render's `$PORT` variable.
+  It sets the right content types for video and the web manifest, and returns
+  `404.html` for missing pages.
+- `requirements.txt`: empty dependency list, so Render's Python build succeeds.
+- `render.yaml`: Render Blueprint for the same service.
 
-**Render Web Service, fully configured in this repo**
+You can also use **New > Blueprint** in Render, connect this repository, and
+Render will read `render.yaml` automatically.
 
-The repo includes `server.py`, `requirements.txt` and `render.yaml` so a Web
-Service works without extra code.
+Your site will be available at the `onrender.com` URL shown in the Render
+Dashboard.
 
-For an existing Web Service, set:
+**Optional: Render Static Site instead**
 
-- Language / Runtime: **Python 3**
-- Build Command: `pip install -r requirements.txt`
-- Start Command: `python3 server.py`
-- Health Check Path: `/`
+If you ever switch to a Static Site, use these settings instead:
 
-`server.py` listens on `0.0.0.0` and uses Render's `$PORT` variable. It serves
-all files from the repo root, sets the right content types for video and the
-web manifest, and returns `404.html` for missing pages.
-
-You can also create the service from `render.yaml` with **New > Blueprint** and
-connecting this repository.
-
-The older fallback command also works if you do not use `server.py`:
-
-```bash
-python3 -m http.server $PORT --bind 0.0.0.0
-```
-
-Do not hardcode a port and do not bind to `127.0.0.1`.
+- Build Command: leave empty
+- Publish Directory: `.`
+- Start Command: leave empty
 
 ## Content notes
 
