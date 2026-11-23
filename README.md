@@ -43,6 +43,9 @@ assets/img/og-cover.png         social sharing image
 assets/img/studio/              poster frames for the three studio reels
 assets/video/                   compressed, web-ready studio clips
 sitemap.xml, robots.txt         search engine files
+server.py                       small Python server for Render Web Services
+requirements.txt                empty dependency list for Render's Python build
+render.yaml                     Render Blueprint for a Python Web Service
 .github/workflows/deploy.yml    auto-deploy to GitHub Pages on push to main
 ```
 
@@ -82,18 +85,32 @@ This is a static site with no build step.
 
 Render will serve the HTML, CSS, JavaScript, video and image files directly.
 
-**If Render requires a Web Service instead**
+**Render Web Service, fully configured in this repo**
 
-- Runtime: **Python 3**
-- Build Command: `echo "No build step"`
-- Start Command:
+The repo includes `server.py`, `requirements.txt` and `render.yaml` so a Web
+Service works without extra code.
+
+For an existing Web Service, set:
+
+- Language / Runtime: **Python 3**
+- Build Command: `pip install -r requirements.txt`
+- Start Command: `python3 server.py`
+- Health Check Path: `/`
+
+`server.py` listens on `0.0.0.0` and uses Render's `$PORT` variable. It serves
+all files from the repo root, sets the right content types for video and the
+web manifest, and returns `404.html` for missing pages.
+
+You can also create the service from `render.yaml` with **New > Blueprint** and
+connecting this repository.
+
+The older fallback command also works if you do not use `server.py`:
 
 ```bash
 python3 -m http.server $PORT --bind 0.0.0.0
 ```
 
-The server must listen on `0.0.0.0` and use Render's `$PORT` variable. Do not
-hardcode a port and do not bind to `127.0.0.1`.
+Do not hardcode a port and do not bind to `127.0.0.1`.
 
 ## Content notes
 

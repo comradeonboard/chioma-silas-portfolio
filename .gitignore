@@ -7,3 +7,7 @@ Thumbs.db
 
 # Original client media (optimised copies live in assets/)
 media content/
+
+# Python bytecode from the Render server helper
+__pycache__/
+*.pyc
